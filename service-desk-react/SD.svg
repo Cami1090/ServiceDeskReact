@@ -1,0 +1,27 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente para el fondo (Azul oscuro a Azul brillante) -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    
+    <!-- Gradiente para el icono interior (Celeste a Esmeralda) -->
+    <linearGradient id="smileGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+  </defs>
+
+  <!-- Cuadrado con bordes redondeados (Fondo del Favicon) -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGradient)" />
+
+  <!-- Burbuja de Chat (Representa el Desk/Soporte) -->
+  <rect x="128" y="144" width="256" height="176" rx="48" fill="#FFFFFF" />
+  
+  <!-- Cola de la burbuja de chat -->
+  <path d="M 176 319 L 176 384 L 240 320 Z" fill="#FFFFFF" />
+
+  <!-- Curva minimalista interior (Representa el Service/Diadema) -->
+  <path d="M 184 216 Q 256 288 328 216" fill="none" stroke="url(#smileGradient)" stroke-width="24" stroke-linecap="round" />
+</svg>

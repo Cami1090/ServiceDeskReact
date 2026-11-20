@@ -1,0 +1,73 @@
+.cabecera {
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.marca {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--text-main);
+}
+.marca:hover { color: var(--text-main); }
+
+.menu, .compacto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.compacto { gap: 4px; }
+
+.enlace {
+  padding: 6px 8px;
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.enlace:hover { color: var(--primary); }
+.compacto .enlace { padding: 4px 6px; font-size: 12px; }
+
+.activo {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.4em;
+}
+
+.enlace:focus-visible,
+.marca:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.usuario {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.error { flex-basis: 100%; margin: 0; }
+
+@media (max-width: 768px) {
+  .cabecera { flex-direction: column; text-align: center; padding: 16px; }
+  .menu, .compacto { justify-content: center; }
+  .controles { width: 100%; justify-content: center; }
+}
