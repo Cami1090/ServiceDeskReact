@@ -27,7 +27,7 @@ export function AuthProvider({ children }) {
     return () => { vigente = false; };
   }, [userId]);
 
-  const perfil = resultadoPerfil?.id === userId ? resultadoPerfil.data : null;
+  const perfil = userId && resultadoPerfil?.id === userId ? resultadoPerfil.data : null;
   const cargando = session === undefined || (Boolean(userId) && resultadoPerfil?.id !== userId);
 
   async function entrar() {
